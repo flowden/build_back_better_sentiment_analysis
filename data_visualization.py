@@ -1,5 +1,5 @@
 # Imports
-from methods import *
+from dictionary_application import *
 import matplotlib.pyplot as plt
 import numpy as np
 from operator import itemgetter
