@@ -1,5 +1,5 @@
 # Imports
-from viz import *
+from data_visualization import *
 
 # Testing functions
 def test_make_corpus_word_count_dict():

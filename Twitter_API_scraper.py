@@ -21,7 +21,7 @@ consumer_secret = SecretKey
 access_token = AccessToken
 access_token_secret = AccessTokenSecret
 
-# Providing our bearer and access tokens 
+# Providing bearer and access tokens 
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 
@@ -35,12 +35,12 @@ n=1
 tweet_list = []
 cursor = tweepy.Cursor(api.search_tweets, count=100, q=query, lang="en",
     result_type="recent", tweet_mode="extended")
-for status in cursor.items(10000): # Look into cursor.next too
+for status in cursor.items(1000): # Look into cursor.next too
     tweet_list.append([n, status.full_text, status.id, status.created_at,
         status.favorite_count, status.user.screen_name, status.user.location])
     n+=1
 
-# Downloading our tweets to a csv file
+# Downloading tweets to a csv file
 with open('tweets.csv', mode='w', encoding='utf-8') as f:
     writer = csv.writer(f)
     writer.writerow(["N", "text", "created_at", "likes_count",

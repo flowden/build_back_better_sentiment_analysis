@@ -3,7 +3,7 @@ from numpy import negative, positive
 import pandas as pd
 from pandas.core.frame import DataFrame
 
-# Loading our data
+# Importing data
 # Dictionaries downloaded from University of Pittsburg: http://mpqa.cs.pitt.edu/
 subjectivity_dictionary = "subjectivity_dict.tff"
 necessities_dictionary = "necessity.tff"
@@ -26,29 +26,19 @@ with open(current_dict, mode='r') as file:
 
 # Importing SOME Tweets we've saved in CSVs with our scraper.py function
 # tweets_nov_22 = pd.read_csv("tweets-10000-11_22.csv", nrows = 10)
-# tweets_dec_4 = pd.read_csv("tweets-10000-12_4(1).csv", nrows = 10)
+# tweets_dec_4 = pd.read_csv("tweets-10000-12_4.csv", nrows = 10)
 # tweets_dec_7 = pd.read_csv("tweets-10000-12_7.csv", nrows = 10)
 
 # Importing ALL Tweets we've saved in CSVs with our scraper.py function
 tweets_nov_22 = pd.read_csv("tweets-10000-11_22.csv")
-tweets_dec_4 = pd.read_csv("tweets-10000-12_4(1).csv")
+tweets_dec_4 = pd.read_csv("tweets-10000-12_4.csv")
 tweets_dec_7 = pd.read_csv("tweets-10000-12_7.csv")
 
-# Joining all smaller Tweet dataframes
+# Joining smaller Tweet dataframes
 tweets_frames = [tweets_nov_22, tweets_dec_4, tweets_dec_7]
 tweets_frames_cleaned = []
 
-############# Quick check of data error in one of our csv files ################
-# dec4_1_ids = (len(tweets_dec_4["text"].unique()))
-# dec4_ids = (len(tweets_dec_4_W["text"].unique()))
-# print("{} has {} unique IDs".format("tweets-10000-12_4(1).csv", dec4_1_ids))
-# print("{} has {} unique IDs".format("tweets-10000-12_4.csv", dec4_ids))
-# printout:
-    # tweets-10000-12_4(1).csv has 10000 unique IDs
-    # tweets-10000-12_4.csv has 48 unique IDs
-################################################################################
-
-# Cleaning our data
+# Cleaning data
 def organize_dataframe(dataframe):
     """standardizes dataframe column names"""
     dataframe = dataframe.rename(columns={"text": "id", "N": "text"})

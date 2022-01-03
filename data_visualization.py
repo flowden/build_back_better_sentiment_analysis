@@ -122,5 +122,3 @@ plt.xlabel("Sentiment Words") # Adding axis labels, title, and saving figure
 plt.ylabel("Word Usage Frequency")
 plt.title("Most Common Sentiment Words")
 plt.savefig("NEW_FINAL_test_word_usage_freq_top_20.png")
-
-print("complete!")

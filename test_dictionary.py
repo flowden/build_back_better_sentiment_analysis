@@ -1,5 +1,5 @@
 # Imports
-from methods import *
+from dictionary_application import *
 
 # Testing functions
 def test_organize_dataframe():
