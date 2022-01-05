@@ -6,12 +6,11 @@ import csv
 ##############################################
 
 # Twitter access keys
-APIKey = '6CL0lMe9G3GC7boEimXLKtLDn'
-SecretKey = 'URWEMWcZxjLsewbI59arKlknmMEWCM3kVh7cfqctK6id1Ahddv'
-BearerToken = 'AAAAAAAAAAAAAAAAAAAAADzpTgEAAAAAUmp%2FGwBkZP0827MlG87dxzvZNOk%3\
-    DvTVmzAzWMBSNvetrPQ0MZQVB7XAJzTKvM3B5mFHxdrMtFNA09O'
-AccessToken = '707599412541808640-v0jEToY3FbzKnz2hzfyoTpHiIoNaozF'
-AccessTokenSecret = 'kAYB8FY5UFtNMz0MUYccPqmZT1F8YH5O1NrYy5wcjIJ9I'
+APIKey = ''
+SecretKey = ''
+BearerToken = ''
+AccessToken = ''
+AccessTokenSecret = ''
 
 ##############################################
 
